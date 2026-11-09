@@ -9,7 +9,7 @@ EKS 위 9개 MSA 서비스의 배포·관측·장애 대응을 맡아, 팀 배�
 Kubernetes  EKS · Karpenter · Helm · ArgoCD · Argo Rollouts
 IaC / AWS   Terraform · VPC · EKS · RDS · ElastiCache · ALB · Route53 · IAM(IRSA)
 관측성       OpenTelemetry · Grafana LGTM(Loki·Tempo·Mimir) · Prometheus · Fluent Bit
-DevSecOps   GitHub Actions · Checkov · Trivy · kube-bench · Falco · External/Sealed Secrets
+DevSecOps   GitHub Actions · Checkov · Trivy · kube-bench · Keycloak · External/Sealed Secrets
 성능·DB      k6 · HikariCP · PostgreSQL 실행 계획 분석
 ```
 
@@ -70,8 +70,9 @@ DevSecOps   GitHub Actions · Checkov · Trivy · kube-bench · Falco · Externa
 ![div4u architecture](assets/div4u-architecture.png)
 </details>
 
-- PR이 열리면 Checkov가 Terraform·K8s 매니페스트를 검사하고, 미준수 항목이 있으면 승인을 보류
-- kube-bench CIS 점검 결과를 S3에 저장해 GitHub Issue·Slack으로 리포트, Falco 런타임 탐지를 Slack에 연동
+- 12개 컴포넌트 Helm 차트를 렌더링해 Checkov로 검사, 변경된 컴포넌트만 스캔해 GitHub Issue·Slack으로 알림
+- kube-bench를 노드별 Job으로 매일 실행 → S3 저장 → GitHub Issue·Slack 리포트, Kagent remediator가 조치 방안 제시
+- Keycloak OIDC로 Argo CD·Harbor 로그인 통합
 - Harbor pull 시크릿을 Git에 둘 수 없는 문제는 ESO와 비교한 뒤 Sealed Secrets로 해결
 
 ---
