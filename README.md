@@ -26,9 +26,13 @@ DevSecOps   GitHub Actions · Checkov · Trivy · kube-bench · Falco · Externa
 | [popcorn_deploy](https://github.com/ProfectProject/popcorn_deploy) | Helm common + umbrella 차트, ArgoCD, Karpenter, LGTM·OTel, ESO |
 | [popcorn_msa](https://github.com/ProfectProject/popcorn_msa) | 애플리케이션 코드 |
 
-<details>
-<summary><b>prod 인프라 아키텍처</b></summary>
+![Popcorn system architecture](assets/popcorn-system-architecture.png)
 
+<details>
+<summary><b>GitOps CI/CD · 관측성 파이프라인 · 리소스 상세 아키텍처</b></summary>
+
+![GitOps CI/CD](assets/popcorn-gitops-cicd.png)
+![Observability](assets/popcorn-observability.png)
 ![Popcorn prod architecture](assets/popcorn-architecture.png)
 </details>
 
