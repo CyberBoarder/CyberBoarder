@@ -61,7 +61,7 @@ DevSecOps   GitHub Actions · Checkov · Trivy · kube-bench · Falco · Externa
 
 서울시 실시간 혼잡도 서비스를 EKS에 배포하고, PR 단계부터 런타임까지 보안 점검을 자동화한 프로젝트
 
-[div4u](https://github.com/CCCR-div4u/div4u) · [k8s-OSS](https://github.com/CCCR-div4u/k8s-OSS) · [AWS-Security-Check](https://github.com/CCCR-div4u/AWS-Security-Check)
+[k8s-OSS](https://github.com/CCCR-div4u/k8s-OSS) (보안 점검 자동화 · 내 작업) · [div4u](https://github.com/CCCR-div4u/div4u) (팀 앱)
 
 <details>
 <summary><b>CI/CD 보안 파이프라인 · EKS 구성</b></summary>
