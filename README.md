@@ -57,7 +57,7 @@ DevSecOps   GitHub Actions · Checkov · Trivy · kube-bench · Falco · Externa
 ---
 
 ## 🔐 div4u — DevSecOps 운영 자동화
-`2025.07 ~ 2025.08` · 4인 팀 · 인프라·보안 자동화 담당
+`2025.07 ~ 2025.08` · 4인 팀 · 인프라·보안 자동화 담당 · 🏆 성과 보고회 우수상
 
 서울시 실시간 혼잡도 서비스를 EKS에 배포하고, PR 단계부터 런타임까지 보안 점검을 자동화한 프로젝트
 
