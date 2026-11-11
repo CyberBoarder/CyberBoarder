@@ -9,7 +9,7 @@ EKS 위 9개 MSA 서비스의 배포·관측·장애 대응을 맡아, 팀 배�
 Kubernetes  EKS · Karpenter · Helm · ArgoCD · Argo Rollouts
 IaC / AWS   Terraform · VPC · EKS · RDS · ElastiCache · ALB · Route53 · IAM(IRSA)
 관측성       OpenTelemetry · Grafana LGTM(Loki·Tempo·Mimir) · Prometheus · Fluent Bit
-DevSecOps   GitHub Actions · Checkov · Trivy · kube-bench · Keycloak · External Secrets
+DevSecOps   GitHub Actions · Checkov · Trivy · kube-bench · Falco · Keycloak · External Secrets
 성능·DB      k6 · HikariCP · PostgreSQL 실행 계획 분석
 ```
 
@@ -72,6 +72,7 @@ DevSecOps   GitHub Actions · Checkov · Trivy · kube-bench · Keycloak · Exte
 
 - 12개 컴포넌트 Helm 차트를 렌더링해 Checkov로 검사, 변경된 컴포넌트만 스캔해 GitHub Issue·Slack으로 알림
 - kube-bench를 노드별 Job으로 매일 실행 → S3 저장 → GitHub Issue·Slack 리포트, Kagent remediator가 조치 방안 제시
+- Falco 런타임 탐지 구축, Falcosidekick으로 탐지 이벤트를 Slack 경보 채널에 연동
 - Keycloak OIDC로 Argo CD·Harbor 로그인 통합
 
 ---
